@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/kubernetes-helm-minikube
 {
-	"name": "Kubernetes - Minikube-in-Docker",
+	"name": "Matthias - Custom",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:latest",
 
@@ -9,7 +9,7 @@
         "ghcr.io/devcontainers/features/java:latest": {
 			"version": "21",
 			"jdkDistro":"tem",
-            		"additionalVersions": "17",
+            "additionalVersions": "17",
 			"installMaven": "true",
 			"installGradle": "true"
 		},
@@ -21,6 +21,16 @@
 			"version": "latest",
 			"helm": "latest",
 			"minikube": "latest"
+		},
+		"ghcr.io/devcontainers/features/common-utils:latest": {
+			"installZsh": true,
+			"upgradePackages": true,
+            "username": "codespace",
+            "userUid": "1000",
+            "userGid": "1000"
+		},
+		"ghcr.io/devcontainers-contrib/features/fzf:1": {
+			"version": "latest"
 		}
 	},
 	"customizations": {
@@ -36,7 +46,6 @@
 				"ms-azuretools.vscode-docker"
 			]
 		}
-	}
-	
-
+	},
+	"postCreateCommand": "echo hallo"
 }
