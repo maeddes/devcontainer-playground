@@ -3,12 +3,13 @@
 {
 	"name": "Kubernetes - Minikube-in-Docker",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	"image": "mcr.microsoft.com/devcontainers/base:latest",
 
 	"features": {
         "ghcr.io/devcontainers/features/java:latest": {
 			"version": "21",
-            "additionalVersions": "17",
+			"jdkDistro":"tem",
+            		"additionalVersions": "17",
 			"installMaven": "true",
 			"installGradle": "true"
 		},
@@ -20,10 +21,7 @@
 			"version": "latest",
 			"helm": "latest",
 			"minikube": "latest"
-		},
-		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:latest": {},
-		"ghcr.io/devcontainers-contrib/features/btop-homebrew:latest": {},
-		"ghcr.io/devcontainers-contrib/features/curl-homebrew:latest": {}
+		}
 	},
 	"customizations": {
 		"vscode": {
