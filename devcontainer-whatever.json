@@ -1,0 +1,12 @@
+{
+	"name": "Universal",
+	"image": "mcr.microsoft.com/devcontainers/universal:latest",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+}
