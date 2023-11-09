@@ -1,0 +1,44 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/kubernetes-helm-minikube
+{
+	"name": "Kubernetes - Minikube-in-Docker",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+
+	"features": {
+        "ghcr.io/devcontainers/features/java:latest": {
+			"version": "21",
+            "additionalVersions": "17",
+			"installMaven": "true",
+			"installGradle": "true"
+		},
+		"ghcr.io/devcontainers/features/docker-in-docker:latest": {
+			"enableNonRootDocker": "true",
+			"moby": "true"
+		},
+		"ghcr.io/devcontainers/features/kubectl-helm-minikube:latest": {
+			"version": "latest",
+			"helm": "latest",
+			"minikube": "latest"
+		},
+		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:latest": {},
+		"ghcr.io/devcontainers-contrib/features/btop-homebrew:latest": {},
+		"ghcr.io/devcontainers-contrib/features/curl-homebrew:latest": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"redhat.java",
+				"vscjava.vscode-maven",
+				"vscjava.vscode-java-dependency",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"vscjava.vscode-java-debug",
+				"vscjava.vscode-spring-initializr",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+	
+
+}
