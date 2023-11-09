@@ -22,13 +22,13 @@
 			"helm": "latest",
 			"minikube": "latest"
 		},
-		"ghcr.io/devcontainers/features/common-utils:latest": {
-			"installZsh": true,
-			"upgradePackages": true,
-			"username": "automatic",
-			"userUid": "automatic",
-			"userGid": "automatic"
-		},
+		// "ghcr.io/devcontainers/features/common-utils:latest": {
+		// 	"installZsh": true,
+		// 	"upgradePackages": true,
+		// 	"username": "automatic",
+		// 	"userUid": "automatic",
+		// 	"userGid": "automatic"
+		// },
 		"ghcr.io/devcontainers-contrib/features/fzf:latest": {
 			"version": "latest"
 		}
