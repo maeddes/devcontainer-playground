@@ -25,11 +25,11 @@
 		"ghcr.io/devcontainers/features/common-utils:latest": {
 			"installZsh": true,
 			"upgradePackages": true,
-            "username": "codespace",
-            "userUid": "1000",
-            "userGid": "1000"
+			"username": "automatic",
+			"userUid": "automatic",
+			"userGid": "automatic"
 		},
-		"ghcr.io/devcontainers-contrib/features/fzf:1": {
+		"ghcr.io/devcontainers-contrib/features/fzf:latest": {
 			"version": "latest"
 		}
 	},
