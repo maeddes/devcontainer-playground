@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/devcontainers/universal:latest
 
 # INSTALL LATEST JAVA
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
-    echo y|sdk install java"
+    echo y|sdk upgrade"
 
 # INSTALL COOL STUFF
 RUN brew install fzf exa buildpacks/tap/pack kubectl
