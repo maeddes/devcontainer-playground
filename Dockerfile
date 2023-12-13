@@ -1,8 +1,9 @@
+
 # ALWAYS USE LATEST
 FROM mcr.microsoft.com/devcontainers/universal:latest
 
-# INSTALL LATEST JAVA
-RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
+# INSTALL LATEST JAVA STUFF
+RUN bash -c ". /usr/local/sdkman/bin/sdkman-init.sh && \
     echo y|sdk upgrade"
 
 # INSTALL COOL STUFF
@@ -12,6 +13,6 @@ RUN yes | $(brew --prefix)/opt/fzf/install
 # DEFAULT TO ZSH
 ENV SHELL=/usr/bin/zsh
 
-RUN git clone https://github.com/zsh-users/zsh-autosuggestions /home/gitpod/.zsh/zsh-autosuggestions
+RUN git clone https://github.com/zsh-users/zsh-autosuggestions /home/vscode/.zsh/zsh-autosuggestions
 
-ADD --chown=vscode:vscode https://raw.githubusercontent.com/maeddes/dotfiles/main/.zshrc.gitpod.full /home/gitpod/.zshrc
+ADD --chown=vscode:vscode https://raw.githubusercontent.com/maeddes/dotfiles/main/.zshrc.gitpod.full /home/vscode/.zshrc
