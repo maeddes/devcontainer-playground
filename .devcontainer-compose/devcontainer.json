@@ -1,0 +1,48 @@
+{
+	"name": "otel-training-tutorial",
+	"dockerComposeFile": [
+		"./docker-compose.yml"
+	],
+	"postStartCommand": "wget -qO- https://github.com/McShelby/hugo-theme-relearn/archive/refs/tags/5.23.2.zip | busybox unzip -d themes -; hugo server",
+	"forwardPorts": [
+		3000
+	],
+	"portsAttributes": {
+		"3000": {
+			"label": "Hugo"
+		}
+	},
+	"service": "otel-training-tutorial",
+	"runServices": [
+		"otel-training-tutorial"
+	],
+	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"[python]": {
+					"editor.formatOnSave": true
+				},
+				"[adoc][markdown][yaml][dockercompose]": {
+					"editor.formatOnPaste": true,
+					"editor.formatOnSave": true,
+					"editor.insertSpaces": true,
+					"editor.tabSize": 2
+				}
+			},
+			"extensions": [
+				"ms-python.vscode-pylance",
+				"charliermarsh.ruff",
+				"ms-python.isort",
+				"ms-python.python",
+				"njpwerner.autodocstring",
+				"KevinRose.vsc-python-indent",
+				"ms-python.black-formatter",
+				"usernamehw.errorlens",
+				"redhat.vscode-yaml",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	}
+}

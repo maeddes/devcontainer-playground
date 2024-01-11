@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  otel-training-tutorial:
+    build:
+      context: ../
+      dockerfile: alpine.Dockerfile
+    tty: true
+    image: otel-tutorial
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ../:/workspace
